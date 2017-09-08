@@ -14,11 +14,12 @@
      limitations under the License.
 -->
 <resources>
+    <color name="accent_color">#ff6c00</color>
     <!-- Primary color of the app (shown in the app bar) -->
-    <color name="primary_color">#4A312A</color>
+    <color name="primary_color">#2e2e2e</color>
 
     <!-- Primary dark color of the app (shown in the status bar) -->
-    <color name="primary_dark_color">#2F1D1A</color>
+    <color name="primary_dark_color">#000000</color>
 
     <!-- Background color for app -->
     <color name="tan_background">#FFF7DA</color>

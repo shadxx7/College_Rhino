@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.educonnect.LoginActivity">
 
+    <include layout="@layout/app_bar_layout" android:id="@+id/login_toolbar" />
+
+
     <Button
         android:id="@+id/button2"
         android:layout_width="158dp"
@@ -21,8 +24,8 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="146dp" />
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="148dp" />
 
     <EditText
         android:id="@+id/log_password"
