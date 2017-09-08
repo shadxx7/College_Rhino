@@ -42,7 +42,7 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_blue_bright"
                 android:gravity="center"
-                android:text="Monil Soni" />
+                android:text="Monil P Soni" />
         </LinearLayout>
     </FrameLayout>
 
