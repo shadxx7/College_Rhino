@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         mAuthListener=FirebaseAuth.getInstance();
 
     }
-    @Override
+    /*@Override
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser=mAuthListener.getCurrentUser();
@@ -25,5 +25,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-    }
+    }*/
 }
