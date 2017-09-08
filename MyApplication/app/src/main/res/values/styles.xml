@@ -33,7 +33,7 @@
 
     <style name="Bio">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">108dp</item>
+        <item name="android:layout_height">188dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:padding">16dp</item>
         <item name="android:textColor">@android:color/black</item>

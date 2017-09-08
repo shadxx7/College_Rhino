@@ -33,21 +33,43 @@
             <LinearLayout
                 style="@style/Bio"
                 android:layout_gravity="center"
-                android:background="@android:color/holo_red_dark"
+                android:background="@color/white"
                 android:orientation="horizontal">
                 <ImageView
                     android:layout_height="match_parent"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:src="@drawable/smalllogo"/>
-                <TextView
-                    android:id="@+id/bio"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
                     android:layout_height="match_parent"
-                    android:background="@android:color/holo_blue_bright"
-                    android:gravity="center"
-                    android:text="Monil P Soni" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:background="@color/white"
+                        android:gravity="bottom"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:text="Monil P Soni" />
+                    <TextView
+                        android:id="@+id/id"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:textAllCaps="true"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
+                        android:text="201601049" />
+                    
+                </LinearLayout>
+                
             </LinearLayout>
         </FrameLayout>
 
@@ -58,7 +80,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@color/category_numbers">
+            android:background="@drawable/rounded_corners">
             <TextView
                 android:id="@+id/course_1"
                 style="@style/CategoryStyle"
@@ -70,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/category_family">
+            android:background="@drawable/rounded_corners">
             <TextView
                 android:id="@+id/course_2"
                 style="@style/CategoryStyle"
@@ -82,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/category_colors">
+            android:background="@drawable/rounded_corners">
             <TextView
                 android:id="@+id/course_3"
                 style="@style/CategoryStyle"
@@ -94,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/category_phrases">
+            android:background="@drawable/rounded_corners">
             <TextView
                 android:id="@+id/course_4"
                 style="@style/CategoryStyle"
@@ -106,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/category_family">
+            android:background="@drawable/rounded_corners">
             <TextView
                 android:id="@+id/course_5"
                 style="@style/CategoryStyle"
@@ -118,7 +140,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/category_numbers">
+            android:background="@drawable/rounded_corners">
             <TextView
                 android:id="@+id/course_6"
                 style="@style/CategoryStyle"
