@@ -62,7 +62,6 @@
             <TextView
                 android:id="@+id/course_1"
                 style="@style/CategoryStyle"
-
                 android:background="?android:attr/selectableItemBackground"
                 android:text="Course #1" />
         </FrameLayout>
