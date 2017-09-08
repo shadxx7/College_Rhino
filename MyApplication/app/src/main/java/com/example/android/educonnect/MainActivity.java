@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuthListener=FirebaseAuth.getInstance();
 
+
         TextView course1 = (TextView) findViewById(R.id.course_1);
         course1.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    /*@Override
+    @Override
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser=mAuthListener.getCurrentUser();
@@ -42,5 +43,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-    }*/
+    }
 }
