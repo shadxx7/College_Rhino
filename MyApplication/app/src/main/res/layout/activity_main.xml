@@ -21,53 +21,94 @@
     android:orientation="vertical"
     tools:context="com.example.android.educonnect.MainActivity">
 
-    <!-- Phrases category -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_phrases">
-        <TextView
-            android:id="@+id/phrases"
+        <LinearLayout
             style="@style/Bio"
-            android:background="?android:attr/selectableItemBackground"
-            android:text="Monil Soni" />
+            android:layout_gravity="center"
+            android:background="@android:color/holo_red_dark"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/smalllogo"/>
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_blue_bright"
+                android:gravity="center"
+                android:text="Monil P Soni" />
+        </LinearLayout>
     </FrameLayout>
 
-    <!-- Numbers category -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_numbers">
         <TextView
-            android:id="@+id/numbers"
+            android:id="@+id/course_1"
             style="@style/CategoryStyle"
             android:background="?android:attr/selectableItemBackground"
             android:text="Course #1" />
     </FrameLayout>
 
-    <!-- Family category -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_family">
         <TextView
-            android:id="@+id/family"
+            android:id="@+id/course_2"
             style="@style/CategoryStyle"
             android:background="?android:attr/selectableItemBackground"
             android:text="Course #2" />
     </FrameLayout>
 
-    <!-- Colors category -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_colors">
         <TextView
-            android:id="@+id/colors"
+            android:id="@+id/course_3"
             style="@style/CategoryStyle"
             android:background="?android:attr/selectableItemBackground"
             android:text="Course #3" />
     </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors">
+        <TextView
+            android:id="@+id/course_4"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Course #4" />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors">
+        <TextView
+            android:id="@+id/course_5"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Course #5" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors">
+        <TextView
+            android:id="@+id/course_6"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Course #6" />
+    </FrameLayout>
 </LinearLayout>
