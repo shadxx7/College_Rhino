@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.educonnect.LoginActivity">
+    tools:context="com.example.android.educonnect.LoginActivity"
+    android:background="@color/primary_color">
 
     <include layout="@layout/app_bar_layout" android:id="@+id/login_toolbar"
         tools:layout_editor_absoluteX="0dp"
@@ -14,6 +15,7 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="158dp"
         android:layout_height="55dp"
         android:text="Login"
@@ -27,6 +29,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="148dp" />
 
@@ -37,6 +40,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="217dp" />
 </android.support.constraint.ConstraintLayout>

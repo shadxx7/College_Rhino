@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.educonnect.RegisterActivity">
+    tools:context="com.example.android.educonnect.RegisterActivity"
+    android:background="@color/primary_color">
 
     <include layout="@layout/app_bar_layout" android:id="@+id/register_toolbar"
-        tools:layout_editor_absoluteY="4dp"
-        tools:layout_editor_absoluteX="-53dp" />
+        tools:layout_editor_absoluteY="1dp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <EditText
         android:id="@+id/reg_email"
@@ -17,6 +18,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="148dp" />
 
@@ -27,11 +29,13 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="216dp" />
 
     <Button
         android:id="@+id/reg_submit_btn"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="133dp"
         android:layout_height="42dp"
         android:text="Button"
@@ -46,6 +50,7 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="84dp" />
 </android.support.constraint.ConstraintLayout>
