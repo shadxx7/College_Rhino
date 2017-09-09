@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         TextView course2 = (TextView) findViewById(R.id.course_2);
         course2.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
