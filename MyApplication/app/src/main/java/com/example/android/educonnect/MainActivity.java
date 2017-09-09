@@ -23,12 +23,78 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, Course1.class);
+                Intent course1Intent = new Intent(MainActivity.this, Course1.class);
 
                 // Start the new activity
-                startActivity(numbersIntent);
+                startActivity(course1Intent);
             }
         });
+
+        TextView course2 = (TextView) findViewById(R.id.course_2);
+        course2.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent course2Intent = new Intent(MainActivity.this, Course2.class);
+
+                // Start the new activity
+                startActivity(course2Intent);
+            }
+        });
+
+        TextView course3 = (TextView) findViewById(R.id.course_3);
+        course3.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent course3Intent = new Intent(MainActivity.this, Course3.class);
+
+                // Start the new activity
+                startActivity(course3Intent);
+            }
+        });
+
+        TextView course4 = (TextView) findViewById(R.id.course_4);
+        course3.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent course4Intent = new Intent(MainActivity.this, Course4.class);
+
+                // Start the new activity
+                startActivity(course4Intent);
+            }
+        });
+
+        TextView course5 = (TextView) findViewById(R.id.course_5);
+        course3.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent course5Intent = new Intent(MainActivity.this, Course5.class);
+
+                // Start the new activity
+                startActivity(course5Intent);
+            }
+        });
+
+        TextView course6 = (TextView) findViewById(R.id.course_6);
+        course3.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent course6Intent = new Intent(MainActivity.this, Course6.class);
+
+                // Start the new activity
+                startActivity(course6Intent);
+            }
+        });
+
 
     }
     /*@Override
