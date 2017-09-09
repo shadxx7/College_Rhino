@@ -1,14 +1,17 @@
 package com.example.android.educonnect;
 
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuthListener;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarToggle;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(course1Intent);
+            }
+        });
+
+        course1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(MainActivity.this,"Long Press",Toast.LENGTH_SHORT).show();
+                return true;
             }
         });
 
@@ -110,6 +122,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.dashboard:
+                        goToDashboard();
+                        break;
+                    case R.id.calendar:
+                        goToCalendar();
+                        break;
+                    case R.id.logout:
+                        goLogout();
+                        break;
+//                    case R.id.upload:
+//                        goUpload();
+//                        break;
+                }
+                return true;
+            }
+        });
 
     }
 
@@ -121,7 +154,37 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void goToDashboard(){
+        // Create a new intent to open the {@link NumbersActivity}
+        Intent dashboardIntent = new Intent(MainActivity.this, MainActivity.class);
 
+        // Start the new activity
+        startActivity(dashboardIntent);
+    }
+
+    private void goToCalendar(){
+        // Create a new intent to open the {@link NumbersActivity}
+        Intent calendarIntent = new Intent(MainActivity.this, Calendar.class);
+
+        // Start the new activity
+        startActivity(calendarIntent);
+    }
+
+    private void goLogout(){
+        // Create a new intent to open the {@link NumbersActivity}
+        Intent logoutIntent = new Intent(MainActivity.this, AuthActivity.class);
+
+        // Start the new activity
+        startActivity(logoutIntent);
+    }
+
+//    private void goUpload(){
+//        // Create a new intent to open the {@link NumbersActivity}
+//        Intent uploadIntent = new Intent(MainActivity.this, Pdf.class);
+//
+//        // Start the new activity
+//        startActivity(uploadIntent);
+//    }
 //    @Override
 //    public void onStart() {
 //        super.onStart();
