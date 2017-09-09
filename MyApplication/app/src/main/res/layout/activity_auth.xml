@@ -9,14 +9,30 @@
     android:background="@color/primary_color">
 
 
+    <ImageView
+        android:id="@+id/ivProfileBg"
+        android:background="@drawable/scholarships"
+        android:layout_width="177dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/auth_signup"
+        android:layout_marginRight="103dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/auth_signin"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="173dp"
         android:layout_height="54dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="45dp"
         android:text="SIGN IN"
+        android:background="@drawable/round_buttons"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -29,9 +45,10 @@
         android:layout_height="54dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="166dp"
+        android:layout_marginTop="305dp"
         android:elevation="@android:dimen/app_icon_size"
         android:text="Sign Up"
+        android:background="@drawable/round_buttons"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
