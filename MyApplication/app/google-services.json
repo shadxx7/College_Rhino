@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "854932413910-dn96l846hc0tf88r5p7etphgkrk7rtub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.educonnect",
+            "certificate_hash": "7bb859cd9b20bd7b8f0733fe40cadd48dcf9c84c"
+          }
+        },
+        {
           "client_id": "854932413910-gi94mk9ebts74slvpqehapsclnnt5rdl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
