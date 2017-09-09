@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,7 +19,7 @@ public class QuesAns extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference myRef;
     private EditText mComment;
-    private Button  mSendBtn;
+    private ImageView mSendBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class QuesAns extends AppCompatActivity {
 
         mQuestion=(TextView)findViewById(R.id.ques);
         mComment=(EditText) findViewById(R.id.comment);
-        mSendBtn=(Button) findViewById(R.id.send_btn);
+        mSendBtn=(ImageView) findViewById(R.id.send_btn);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -13,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AddQues extends AppCompatActivity {
 
     private EditText mQuesAsk;
-    private Button mBtnAsk;
+    private ImageView mBtnAsk;
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -23,7 +24,7 @@ public class AddQues extends AppCompatActivity {
         setContentView(R.layout.activity_add_ques);
 
         mQuesAsk=(EditText)findViewById(R.id.Ques_ask);
-        mBtnAsk=(Button)findViewById(R.id.ask_btn);
+        mBtnAsk=(ImageView) findViewById(R.id.ask_btn);
 
          database= FirebaseDatabase.getInstance();
          myRef = database.getReference("Course1").child("Question");
@@ -38,7 +39,6 @@ public class AddQues extends AppCompatActivity {
                  finish();
              }
          });
-
 
     }
 }
