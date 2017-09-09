@@ -15,6 +15,7 @@ public class AuthActivity extends AppCompatActivity {
     private Button mSignIn;
     private Button mSignUp;
 
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,9 @@ public class AuthActivity extends AppCompatActivity {
         mSignIn=(Button)findViewById(R.id.auth_signin);
         mSignUp=(Button)findViewById(R.id.auth_signup);
 
+        mToolbar = (Toolbar) findViewById(R.id.auth_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("SignIn or SignUp");
 
         mSignIn.setOnClickListener(new View.OnClickListener() {
             @Override

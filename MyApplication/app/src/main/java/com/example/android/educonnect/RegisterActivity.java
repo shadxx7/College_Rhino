@@ -41,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
                 });
     }
 
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +53,10 @@ public class RegisterActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.reg_password);
         mCreateBtn = (Button) findViewById(R.id.reg_submit_btn);
         mAuth = FirebaseAuth.getInstance();
+
+        mToolbar = (Toolbar) findViewById(R.id.register_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Register");
 
         mCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
