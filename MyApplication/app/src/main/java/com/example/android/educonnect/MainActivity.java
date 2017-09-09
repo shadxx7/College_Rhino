@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView course4 = (TextView) findViewById(R.id.course_4);
-        course3.setOnClickListener(new View.OnClickListener() {
+        course4.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView course5 = (TextView) findViewById(R.id.course_5);
-        course3.setOnClickListener(new View.OnClickListener() {
+        course5.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView course6 = (TextView) findViewById(R.id.course_6);
-        course3.setOnClickListener(new View.OnClickListener() {
+        course6.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
