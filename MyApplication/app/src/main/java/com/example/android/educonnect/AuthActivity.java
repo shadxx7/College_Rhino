@@ -15,12 +15,17 @@ public class AuthActivity extends AppCompatActivity {
     private Button mSignIn;
     private Button mSignUp;
 
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         mSignIn=(Button)findViewById(R.id.auth_signin);
         mSignUp=(Button)findViewById(R.id.auth_signup);
+
+
+        getSupportActionBar().setTitle("SignIn or SignUp");
 
         mSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
