@@ -2,6 +2,8 @@ package com.example.android.educonnect;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,6 +18,7 @@ public class QuesAns extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference myRef;
     private EditText mComment;
+    private Button  mSendBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +26,11 @@ public class QuesAns extends AppCompatActivity {
         setContentView(R.layout.activity_ques_ans);
 
         database=FirebaseDatabase.getInstance();
-        myRef=database.getReference("Question").child("Course1");
+        myRef=database.getReference("Course1").child("Question");
 
         mQuestion=(TextView)findViewById(R.id.ques);
-        mComment=(EditText) findViewById(R.id.coomment);
+        mComment=(EditText) findViewById(R.id.comment);
+        mSendBtn=(Button) findViewById(R.id.send_btn);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,9 +48,16 @@ public class QuesAns extends AppCompatActivity {
 
             }
         });
-        DatabaseReference myRef = database.getReference("Question");
-        String get_comment=mComment.getText().toString();
-        mComment.setText("");
-        myRef.setValue(get_comment);
+
+        mSendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference refComment=database.getReference("Course1").child("Comment");
+                String get_comment=mComment.getText().toString();
+                refComment.setValue(get_comment);
+                mComment.setText("");
+            }
+        });
+
     }
 }

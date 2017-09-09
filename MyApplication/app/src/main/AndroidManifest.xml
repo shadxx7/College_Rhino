@@ -12,37 +12,51 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".AuthActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".Course1"
+        <activity
+            android:name=".Course1"
             android:label="Course 1"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Course2"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Course2"
             android:label="Course 2"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Course3"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Course3"
             android:label="Course 3"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Course4"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Course4"
             android:label="Course 4"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Course5"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Course5"
             android:label="Course 5"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Course6"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Course6"
             android:label="Course 6"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Calendar"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Calendar"
             android:label="My Calendar"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Pdf"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".QuesAns"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Pdf"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QuesAns"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".AddQues"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

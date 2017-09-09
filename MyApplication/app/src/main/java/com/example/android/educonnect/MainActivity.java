@@ -27,9 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuthListener=FirebaseAuth.getInstance();
-        Intent intent=new Intent(MainActivity.this,QuesAns.class);
-        startActivity(intent);
-        finish();
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mActionBarToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
