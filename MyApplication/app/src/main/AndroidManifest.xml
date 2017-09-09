@@ -41,6 +41,8 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Pdf"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".QuesAns"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
