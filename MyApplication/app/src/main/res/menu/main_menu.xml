@@ -12,4 +12,7 @@
     <item android:id="@+id/logout"
         android:icon="@mipmap/ic_exit_to_app_black_24dp"
         android:title="Logout" />
+
+    <item android:id="@+id/upload"
+        android:title="Upload PDF"/>
 </menu>

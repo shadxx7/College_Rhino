@@ -127,6 +127,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.logout:
                         goLogout();
                         break;
+                    case R.id.upload:
+                        goUpload();
+                        break;
                 }
                 return true;
             }
@@ -164,6 +167,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Start the new activity
         startActivity(logoutIntent);
+    }
+
+    private void goUpload(){
+        // Create a new intent to open the {@link NumbersActivity}
+        Intent uploadIntent = new Intent(MainActivity.this, Pdf.class);
+
+        // Start the new activity
+        startActivity(uploadIntent);
     }
 //    @Override
 //    public void onStart() {
