@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.educonnect.AuthActivity">
 
+    <include layout="@layout/app_bar_layout" android:id="@+id/auth_toolbar" />
     <Button
         android:id="@+id/auth_signin"
         android:layout_width="173dp"

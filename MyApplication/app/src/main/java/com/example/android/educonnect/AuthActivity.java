@@ -3,6 +3,7 @@ package com.example.android.educonnect;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,12 +14,19 @@ public class AuthActivity extends AppCompatActivity {
 
     private Button mSignIn;
     private Button mSignUp;
+
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         mSignIn=(Button)findViewById(R.id.auth_signin);
         mSignUp=(Button)findViewById(R.id.auth_signup);
+
+        mToolbar = (Toolbar) findViewById(R.id.auth_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("SignIn or SignUp");
 
         mSignIn.setOnClickListener(new View.OnClickListener() {
             @Override

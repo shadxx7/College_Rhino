@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.educonnect.LoginActivity">
 
+    <include layout="@layout/app_bar_layout" android:id="@+id/login_toolbar" />
+
     <Button
         android:id="@+id/log_btn"
         android:layout_width="158dp"

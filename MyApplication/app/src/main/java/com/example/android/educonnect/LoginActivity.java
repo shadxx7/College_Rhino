@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mPassword;
     private Button mLog;
 
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,10 @@ public class LoginActivity extends AppCompatActivity {
         mDisplayName=(EditText)findViewById(R.id.log_email);
         mPassword=(EditText)findViewById(R.id.log_password);
         mLog=(Button)findViewById(R.id.log_btn);
+
+        mToolbar = (Toolbar) findViewById(R.id.login_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Login");
 
         mLog.setOnClickListener(new View.OnClickListener() {
             @Override
