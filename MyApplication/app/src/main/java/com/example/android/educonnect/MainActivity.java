@@ -3,6 +3,7 @@ package com.example.android.educonnect;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,11 +12,13 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuthListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuthListener=FirebaseAuth.getInstance();
+
 
         TextView course1 = (TextView) findViewById(R.id.course_1);
         course1.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    /*@Override
+    @Override
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser=mAuthListener.getCurrentUser();
@@ -106,5 +109,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-    }*/
+    }
 }
