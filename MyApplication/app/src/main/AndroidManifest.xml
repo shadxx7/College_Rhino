@@ -24,6 +24,8 @@
         <activity android:name=".Course4" />
         <activity android:name=".Course5" />
         <activity android:name=".Course6" />
+        <uses-permission android:name="android.permission.INTERNET"/>
+
     </application>
 
 </manifest>
