@@ -34,9 +34,9 @@ public class LoginActivity extends AppCompatActivity {
         mPassword=(EditText)findViewById(R.id.log_password);
         mLog=(Button)findViewById(R.id.log_btn);
 
-        mToolbar = (Toolbar) findViewById(R.id.login_toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Login");
+//        mToolbar = (Toolbar) findViewById(R.id.login_toolbar);
+//        setSupportActionBar(mToolbar);
+//        getSupportActionBar().setTitle("Login");
 
         mLog.setOnClickListener(new View.OnClickListener() {
             @Override

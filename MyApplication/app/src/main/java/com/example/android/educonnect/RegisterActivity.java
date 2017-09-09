@@ -54,9 +54,9 @@ public class RegisterActivity extends AppCompatActivity {
         mCreateBtn = (Button) findViewById(R.id.reg_submit_btn);
         mAuth = FirebaseAuth.getInstance();
 
-        mToolbar = (Toolbar) findViewById(R.id.register_toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Register");
+//        mToolbar = (Toolbar) findViewById(R.id.register_toolbar);
+//        setSupportActionBar(mToolbar);
+//        getSupportActionBar().setTitle("Register");
 
         mCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override

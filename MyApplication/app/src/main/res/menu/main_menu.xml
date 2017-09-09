@@ -2,11 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/dashboard"
+        android:icon="@mipmap/ic_dashboard_black_24dp"
         android:title="My Dashboard" />
 
     <item android:id="@+id/calendar"
+        android:icon="@mipmap/ic_date_range_black_24dp"
         android:title="Calendar" />
 
     <item android:id="@+id/logout"
+        android:icon="@mipmap/ic_exit_to_app_black_24dp"
         android:title="Logout" />
 </menu>
