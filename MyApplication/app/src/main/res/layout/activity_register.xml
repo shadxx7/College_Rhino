@@ -7,7 +7,7 @@
     tools:context="com.example.android.educonnect.RegisterActivity"
     android:background="@color/primary_color">
 
-    <include layout="@layout/app_bar_layout" android:id="@+id/register_toolbar"
+    <include android:id="@+id/register_toolbar"
         tools:layout_editor_absoluteY="72dp"
         tools:layout_editor_absoluteX="157dp" />
 

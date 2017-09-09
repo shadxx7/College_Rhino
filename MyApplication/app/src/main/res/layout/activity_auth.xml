@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.educonnect.AuthActivity"
-    android:background="@color/primary_color">
+    android:background="@color/white">
 
-    <include layout="@layout/app_bar_layout" android:id="@+id/auth_toolbar" />
+    <include android:id="@+id/auth_toolbar" />
 
     <Button
         android:id="@+id/auth_signin"
@@ -28,7 +29,7 @@
         android:layout_height="54dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="166dp"
         android:elevation="@android:dimen/app_icon_size"
         android:text="Sign Up"
         app:layout_constraintHorizontal_bias="0.502"

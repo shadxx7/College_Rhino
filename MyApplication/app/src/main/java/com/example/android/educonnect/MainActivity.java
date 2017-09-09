@@ -1,9 +1,12 @@
 package com.example.android.educonnect;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -12,6 +15,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuthListener;
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mActionBarToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuthListener=FirebaseAuth.getInstance();
 
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mActionBarToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mActionBarToggle);
+        mActionBarToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView course1 = (TextView) findViewById(R.id.course_1);
         course1.setOnClickListener(new View.OnClickListener() {
@@ -100,14 +112,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser=mAuthListener.getCurrentUser();
-        if(currentUser==null) {
-            Intent intent = new Intent(MainActivity.this, AuthActivity.class);
-            startActivity(intent);
-            finish();
-        }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mActionBarToggle.onOptionsItemSelected(item))
+            return true;
+
+        return super.onOptionsItemSelected(item);
     }
+
+
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        FirebaseUser currentUser=mAuthListener.getCurrentUser();
+//        if(currentUser==null) {
+//            Intent intent = new Intent(MainActivity.this, AuthActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
+//    }
 }
