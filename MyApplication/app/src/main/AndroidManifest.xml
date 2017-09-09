@@ -24,6 +24,7 @@
         <activity android:name=".Course4" />
         <activity android:name=".Course5" />
         <activity android:name=".Course6" />
+        <activity android:name=".Calendar"/>
     </application>
 
 </manifest>
