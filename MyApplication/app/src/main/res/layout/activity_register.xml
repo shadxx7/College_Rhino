@@ -7,9 +7,6 @@
     tools:context="com.example.android.educonnect.RegisterActivity"
     android:background="@color/primary_color">
 
-    <include android:id="@+id/register_toolbar"
-        tools:layout_editor_absoluteY="72dp"
-        tools:layout_editor_absoluteX="157dp" />
 
     <EditText
         android:id="@+id/reg_email"

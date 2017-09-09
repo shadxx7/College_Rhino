@@ -7,7 +7,6 @@
     tools:context="com.example.android.educonnect.LoginActivity"
     android:background="@color/primary_color">
 
-    <include android:id="@+id/login_toolbar" />
 
     <Button
         android:id="@+id/log_btn"
