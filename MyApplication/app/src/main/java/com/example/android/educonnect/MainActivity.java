@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -48,7 +49,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        course1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(MainActivity.this,"Long Press",Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
 
         TextView course2 = (TextView) findViewById(R.id.course_2);
         course2.setOnClickListener(new View.OnClickListener() {

@@ -22,22 +22,22 @@
             android:label="Course 1"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Course2"
-            android:label="Course 1"
+            android:label="Course 2"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Course3"
-            android:label="Course 1"
+            android:label="Course 3"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Course4"
-            android:label="Course 1"
+            android:label="Course 4"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Course5"
-            android:label="Course 1"
+            android:label="Course 5"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Course6"
-            android:label="Course 1"
+            android:label="Course 6"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Calendar"
-            android:label="Course 1"
+            android:label="My Calendar"
             android:parentActivityName=".MainActivity"/>
     </application>
 
