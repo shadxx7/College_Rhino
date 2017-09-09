@@ -1,21 +1,15 @@
 package com.example.android.educonnect;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,18 +22,14 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mActionBarToggle;
     private NavigationView navigationView;
 
-    private TextView mCourseName;
-    private TextView mProf;
-    private TextView mCredits;
-    private TextView mCriteria;
-    private TextView mPercentage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuthListener=FirebaseAuth.getInstance();
-
+        Intent intent=new Intent(MainActivity.this,QuesAns.class);
+        startActivity(intent);
+        finish();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mActionBarToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
@@ -64,17 +54,7 @@ public class MainActivity extends AppCompatActivity {
         course1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
-                variables(mView);
-                mCourseName.setText("Science, Technology and Society");
-                mProf.setText("Madhumita Majmudar");
-                mCredits.setText("Credits: 4");
-                mCriteria.setText("Attendance twice a week");
-                mPercentage.setText("100%");
-                mBuilder.setView(mView);
-                AlertDialog dialog = mBuilder.create();
-                dialog.show();
+                Toast.makeText(MainActivity.this,"Long Press",Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -92,25 +72,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        course2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
-                variables(mView);
-                mCourseName.setText("Signals and System");
-                mProf.setText("Manish Narwaria");
-                mCredits.setText("Credits: 4");
-                mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
-                mBuilder.setView(mView);
-                AlertDialog dialog = mBuilder.create();
-                dialog.show();
-                return true;
-            }
-        });
-
         TextView course3 = (TextView) findViewById(R.id.course_3);
         course3.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
@@ -121,25 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(course3Intent);
-            }
-        });
-
-        course3.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
-                variables(mView);
-                mCourseName.setText("Design and Analysis of Algorithms");
-                mProf.setText("Rahul Muthu");
-                mCredits.setText("Credits: 4");
-                mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
-                mBuilder.setView(mView);
-                AlertDialog dialog = mBuilder.create();
-                dialog.show();
-                return true;
             }
         });
 
@@ -156,25 +98,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        course4.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
-                variables(mView);
-                mCourseName.setText("Computer Systems Organization");
-                mProf.setText("Naresh Jotwani");
-                mCredits.setText("Credits: 4.5");
-                mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
-                mBuilder.setView(mView);
-                AlertDialog dialog = mBuilder.create();
-                dialog.show();
-                return true;
-            }
-        });
-
         TextView course5 = (TextView) findViewById(R.id.course_5);
         course5.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
@@ -188,25 +111,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        course5.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
-                variables(mView);
-                mCourseName.setText("Electromagnetic Theory");
-                mProf.setText("Gautam Datta");
-                mCredits.setText("Credits: 4");
-                mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
-                mBuilder.setView(mView);
-                AlertDialog dialog = mBuilder.create();
-                dialog.show();
-                return true;
-            }
-        });
-
         TextView course6 = (TextView) findViewById(R.id.course_6);
         course6.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
@@ -217,25 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(course6Intent);
-            }
-        });
-
-        course6.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-                View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
-                variables(mView);
-                mCourseName.setText("Groups and Linear Algebera");
-                mProf.setText("Jaideep Mulhelkar");
-                mCredits.setText("Credits: 4");
-                mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
-                mBuilder.setView(mView);
-                AlertDialog dialog = mBuilder.create();
-                dialog.show();
-                return true;
             }
         });
 
@@ -253,16 +138,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.logout:
                         goLogout();
                         break;
-//                    case R.id.upload:
-//                        goUpload();
-//                        break;
+                    case R.id.upload:
+                        goUpload();
+                        break;
                 }
                 return true;
             }
         });
 
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -296,22 +180,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(logoutIntent);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser=mAuthListener.getCurrentUser();
-        if(currentUser==null) {
-            Intent intent = new Intent(MainActivity.this, AuthActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
+    private void goUpload(){
+        // Create a new intent to open the {@link NumbersActivity}
+        Intent uploadIntent = new Intent(MainActivity.this, Pdf.class);
 
-    private void variables(View mView){
-        mCourseName = (TextView) mView.findViewById(R.id.courseName);
-        mProf = (TextView) mView.findViewById(R.id.prof);
-        mCredits = (TextView) mView.findViewById(R.id.credits);
-        mCriteria = (TextView) mView.findViewById(R.id.criteria);
-        mPercentage = (TextView) mView.findViewById(R.id.percentage);
+        // Start the new activity
+        startActivity(uploadIntent);
     }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        /*FirebaseUser currentUser=mAuthListener.getCurrentUser();
+//        if(currentUser==null) {*/
+//            Intent intent = new Intent(MainActivity.this, QuesAns.class);
+//            startActivity(intent);
+//            finish();
+//        //}
+//    }
 }
