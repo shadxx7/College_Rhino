@@ -10,7 +10,7 @@ public class Course2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course2);
+        setContentView(R.layout.activity_course);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 

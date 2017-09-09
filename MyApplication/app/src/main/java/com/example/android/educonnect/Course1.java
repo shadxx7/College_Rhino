@@ -10,10 +10,10 @@ public class Course1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course1);
+
 
         // Set the content of the activity to use the activity_main.xml layout file
-
+        setContentView(R.layout.activity_course);
 
         // Find the view pager that will allow the user to swipe between fragments
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);

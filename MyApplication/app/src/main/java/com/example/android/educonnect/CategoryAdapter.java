@@ -47,12 +47,11 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new notesFragment();
-        } else if (position == 1) {
-            return new videoFragment();
-        } else  {
             return new forumFragment();
-
+        } else if (position == 1) {
+            return new notesFragment();
+        } else {
+            return new videoFragment();
         }
     }
 
@@ -61,18 +60,17 @@ public class CategoryAdapter extends FragmentPagerAdapter {
      */
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.notes);
-        }
-         else if (position == 1) {
-            return mContext.getString(R.string.videos);
-        } else  {
             return mContext.getString(R.string.forum);
+        } else if (position == 1) {
+            return mContext.getString(R.string.notes);
+        } else {
+            return mContext.getString(R.string.videos);
         }
     }
 }
