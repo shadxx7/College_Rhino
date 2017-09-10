@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 variables(mView);
                 mCourseName.setText("Science, Technology and Society");
                 mProf.setText("Madhumita Majumdar");
-                mCredits.setText("Credits: 4");
+                mCredits.setText("Credits: 3");
                 mCriteria.setText("Attendance twice a week");
                 final String att = "75";
                 mProgress.setDonut_progress(att);
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -142,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -173,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -204,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -235,6 +240,7 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
