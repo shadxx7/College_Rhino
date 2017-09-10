@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,12 +19,7 @@
         android:layout_marginTop="8dp"
         android:text="Question"
         android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053"
-        app:layout_constraintHorizontal_bias="1.0" />
+        />
 
     <EditText
         android:id="@+id/comment"
@@ -33,32 +28,22 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="22dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Comment"
         android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
-        app:layout_constraintVertical_bias="0.392" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView2"
-        android:layout_width="355dp"
-        android:layout_height="241dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="12dp"
-        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ques" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        />
 
     <ImageView
         android:id="@+id/send_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/send_icon"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="447dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

@@ -33,13 +33,16 @@ public class QuesAns extends AppCompatActivity {
         mComment=(EditText) findViewById(R.id.comment);
         mSendBtn=(ImageView) findViewById(R.id.send_btn);
 
+        String s = getIntent().getStringExtra(forumFragment.key);
+        mQuestion.setText(s);
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String value = (String)dataSnapshot.getValue();
-                mQuestion.setText(value);
+                /*String value = (String)dataSnapshot.getValue();
+                mQuestion.setText(value);*/
 
             }
 
@@ -48,6 +51,7 @@ public class QuesAns extends AppCompatActivity {
                 // Failed to read value
 
             }
+
         });
 
         mSendBtn.setOnClickListener(new View.OnClickListener() {

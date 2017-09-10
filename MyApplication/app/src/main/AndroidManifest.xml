@@ -54,7 +54,7 @@
         <activity
             android:name=".QuesAns"
             android:label="Questions n' Answers"
-            android:parentActivityName=".MainActivity" />
+            />
         <activity android:name=".AddQues"
             android:label="Ask!"
             android:parentActivityName=".MainActivity">

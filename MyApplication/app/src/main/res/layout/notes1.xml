@@ -4,16 +4,9 @@
     android:layout_height="match_parent"
     >
 
-   <FrameLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="PLACEHOLDER TEXT"/>
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:text="Notes"
-           android:textColor="#4E342E"
-           android:background="#F8BBD0"/>
-   </FrameLayout>
 </LinearLayout>
