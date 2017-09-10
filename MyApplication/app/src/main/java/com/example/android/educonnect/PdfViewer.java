@@ -40,7 +40,7 @@ public class PdfViewer extends AppCompatActivity {
 
         try {
             progressDialog.setTitle("Downloading from server");
-            final File localFile= File.createTempFile("/","pdf");
+            final File localFile= File.createTempFile("PDF","pdf");
 
 
             pdfView.fromFile(localFile).load();
