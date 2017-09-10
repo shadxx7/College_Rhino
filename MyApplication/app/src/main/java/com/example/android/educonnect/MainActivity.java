@@ -68,9 +68,8 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
                 View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
                 variables(mView);
-                Button mButton = (Button) mView.findViewById(R.id.button1);
                 mCourseName.setText("Science, Technology and Society");
-                mProf.setText("Madhumita Majmudar");
+                mProf.setText("Madhumita Majumdar");
                 mCredits.setText("Credits: 4");
                 mCriteria.setText("Attendance twice a week");
                 final String att = "75";
