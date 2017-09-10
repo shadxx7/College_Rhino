@@ -3,6 +3,7 @@ package com.example.android.educonnect;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,12 +17,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.lzyzsd.circleprogress.DonutProgress;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuthListener;
@@ -34,16 +40,33 @@ public class MainActivity extends AppCompatActivity {
     private TextView mCredits;
     private TextView mCriteria;
     private DonutProgress mProgress;
+    private TextView mName;
+    private TextView mID;
+    private String name;
+    private String email;
+    private Uri photoUrl;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuthListener=FirebaseAuth.getInstance();
-
+//        mName = (TextView)findViewById(R.id.name);
+        mID = (TextView)findViewById(R.id.id);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mActionBarToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        if (user != null) {
+            // Name, email address, and profile photo Url
+            name = user.getDisplayName();
+            email = user.getEmail();
+            photoUrl = user.getPhotoUrl();
+
+        }
+//        mName.setText(name);
+        mID.setText(email);
         mDrawerLayout.addDrawerListener(mActionBarToggle);
         mActionBarToggle.syncState();
 
