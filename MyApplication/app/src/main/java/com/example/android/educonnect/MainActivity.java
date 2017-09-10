@@ -253,14 +253,19 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.logout:
                         goLogout();
                         break;
-//                    case R.id.upload:
-//                        goUpload();
-//                        break;
+                    case R.id.upload:
+                        goUpload();
+                        break;
                 }
                 return true;
             }
         });
 
+    }
+
+    private void goUpload() {
+        Intent intent=new Intent(MainActivity.this,Pdf.class);
+        startActivity(intent);
     }
 
 
@@ -294,6 +299,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Start the new activity
         startActivity(logoutIntent);
+        mAuthListener.signOut();
     }
 
     @Override
@@ -305,6 +311,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+        /*else{
+            Intent intent = new Intent(MainActivity.this, Course1.class);
+            startActivity(intent);
+            finish();
+        }*/
     }
 
     private void variables(View mView){

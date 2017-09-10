@@ -27,7 +27,7 @@ public class AddQues extends AppCompatActivity {
         mBtnAsk=(ImageView) findViewById(R.id.ask_btn);
 
          database= FirebaseDatabase.getInstance();
-         myRef = database.getReference("Course1").child("Question");
+        myRef=database.getReference("Course1").child("Question").child("Q"+(forumFragment.keySize));
          mBtnAsk.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {

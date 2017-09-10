@@ -17,7 +17,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Question"
+        android:hint="Question"
+        android:textSize="20sp"
         android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         />
 
@@ -28,11 +29,12 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="22dp"
         android:layout_marginStart="8dp"
-        android:text="Comment"
+        android:hint="Comment"
         android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="8dp"
+
         />
 
     <ImageView
@@ -40,10 +42,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/send_icon"
-        android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_alignTop="@+id/comment"
+        android:layout_alignEnd="@+id/listView" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ques"
+        android:layout_above="@+id/comment"
+        android:layout_alignStart="@+id/ques"
+        android:layout_alignEnd="@+id/ques"
+        android:id="@+id/listView"
+        />
 
 </RelativeLayout>

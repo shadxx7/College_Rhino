@@ -20,6 +20,8 @@ import android.widget.Toast;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -37,6 +39,8 @@ public class Pdf extends AppCompatActivity {
     private StorageReference mStorageRef;
     private ProgressDialog mProgressDialog;
     private Uri downloadUrl;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,7 @@ public class Pdf extends AppCompatActivity {
                 intentGalley.setType("application/pdf");
                 //startActivity(intentGalley);
                 startActivityForResult(intentGalley, PICK_GALLERY_PDF);
-
+        firebaseDatabase=FirebaseDatabase.getInstance();
 
 
     }
@@ -72,6 +76,9 @@ public class Pdf extends AppCompatActivity {
 
             StorageReference store_place=mStorageRef.child("pdf/"+getFileName(pdf));
             Toast.makeText(Pdf.this,"pdf/"+getFileName(pdf), Toast.LENGTH_SHORT).show();
+            String res=getFileName(pdf);
+            databaseReference=firebaseDatabase.getReference("Course1").child("pdf").child(res.substring(0,res.length()-4));
+            databaseReference.setValue(getFileName(pdf));
             store_place.putFile(pdf).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
