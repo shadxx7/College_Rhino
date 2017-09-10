@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.lzyzsd.circleprogress.DonutProgress;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mProf;
     private TextView mCredits;
     private TextView mCriteria;
-    private TextView mPercentage;
+    private DonutProgress mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,13 +69,16 @@ public class MainActivity extends AppCompatActivity {
                 View mView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
                 variables(mView);
                 mCourseName.setText("Science, Technology and Society");
-                mProf.setText("Madhumita Majmudar");
-                mCredits.setText("Credits: 4");
+                mProf.setText("Madhumita Majumdar");
+                mCredits.setText("Credits: 3");
                 mCriteria.setText("Attendance twice a week");
-                mPercentage.setText("100%");
+                final String att = "75";
+                mProgress.setDonut_progress(att);
+
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -102,11 +106,12 @@ public class MainActivity extends AppCompatActivity {
                 mProf.setText("Manish Narwaria");
                 mCredits.setText("Credits: 4");
                 mCriteria.setText("No Attendance");
-                mPercentage.setText("");
+                mProgress.setDonut_progress("100");
 
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -134,11 +139,12 @@ public class MainActivity extends AppCompatActivity {
                 mProf.setText("Rahul Muthu");
                 mCredits.setText("Credits: 4");
                 mCriteria.setText("No Attendance");
-                mPercentage.setText("");
+                mProgress.setDonut_progress("100");
 
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -166,11 +172,11 @@ public class MainActivity extends AppCompatActivity {
                 mProf.setText("Naresh Jotwani");
                 mCredits.setText("Credits: 4.5");
                 mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
+                mProgress.setDonut_progress("100");
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -198,11 +204,11 @@ public class MainActivity extends AppCompatActivity {
                 mProf.setText("Gautam Datta");
                 mCredits.setText("Credits: 4");
                 mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
+                mProgress.setDonut_progress("100");
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -230,11 +236,11 @@ public class MainActivity extends AppCompatActivity {
                 mProf.setText("Jaideep Mulhelkar");
                 mCredits.setText("Credits: 4");
                 mCriteria.setText("No Attendance");
-                mPercentage.setText("");
-
+                mProgress.setDonut_progress("100");
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
+                Toast.makeText(MainActivity.this, "Sorry for static attendance. The app development is still in progress.", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -323,6 +329,6 @@ public class MainActivity extends AppCompatActivity {
         mProf = (TextView) mView.findViewById(R.id.prof);
         mCredits = (TextView) mView.findViewById(R.id.credits);
         mCriteria = (TextView) mView.findViewById(R.id.criteria);
-        mPercentage = (TextView) mView.findViewById(R.id.percentage);
+        mProgress = (DonutProgress) mView.findViewById(R.id.donut_progress);
     }
 }
